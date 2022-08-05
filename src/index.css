@@ -14,3 +14,12 @@ body {
   background-color: #a8a8a83d;
   height: 5px;
  }
+ .rate
+ {
+  color: #fff;
+  background-color: black;
+  position: absolute;
+  padding:10px;
+ top: 0;
+ right: 0; 
+ }
