@@ -17,19 +17,17 @@ export default class Movies extends Component {
     render() {
         return (
             <>
-                <div className='d-flex justify-content-center my-9'>مرحبا بك فى موقع هابي تايم </div>
-                <div className="container my-5 ">
-
-
+                 <div className="container my-5 ">
                     <div className="row   flex-row-reverse">
+ 
+                        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center ">
 
-                        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center bg-danger">
                             <h2>Trending Movies now </h2>
                             <p>Most watched </p>
                         </div>
 
                         {
-                            this.state.movie.slice(0, 10).map((value, index) => {
+                            this.state.movie.slice(0, 20).map((value, index) => {
                                 return (
                                     <>
 
@@ -54,13 +52,13 @@ export default class Movies extends Component {
                     </div>
                     <div className="row   flex-row-reverse">
 
-                        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center bg-danger">
+                        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
                             <h2>Trending Seris now </h2>
                             <p>Most watched </p>
                         </div>
 
                         {
-                            this.state.tv.slice(0, 10).map((value, index) => {
+                            this.state.tv.slice(0, 20).map((value, index) => {
                                 return (
                                     <>
 
