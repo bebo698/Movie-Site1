@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat Alternates', sans-serif;
   background-color: #131722;
   color: #fff;
+  box-sizing: content-box;
   };
 
  .secondfontcolor

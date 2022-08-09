@@ -8,7 +8,7 @@ import Login from './components/Login/Login.jsx';
 import { Redirect, Route, Routes } from "react-router-dom"
 import Register from './components/Register/Register.jsx';
 import Protectedroutes from './components/protectedroutes/protectedroutes.jsx';
-
+import 'bootstrap/dist/js/bootstrap'
  class App extends Component {
   render() {
     return (

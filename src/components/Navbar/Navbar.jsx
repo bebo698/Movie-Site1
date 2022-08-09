@@ -1,37 +1,44 @@
 import React , {Component} from "react";
+ 
 import {NavLink} from "react-router-dom" ;
-// import MenuIcon from '@material-ui/icons/Menu';
-// import CloseIcon from '@material-ui/icons/Close';
+ 
 export default class Navbar extends Component {
+
+    constructor ()
+    {
+        super ();
+        this.state = { show : true , }
+    }
     render ()
     {
         return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container">
-                    <a className="navbar-brand text-info" href="#">CODE WITH YD</a>
-                    <button className="navbar-toggler border border-info text-info" 
-                    onClick={ ()=>{ this.setState({show: !this.state.show}) } } >
-                        {/* {this.state.show ? <MenuIcon /> : <CloseIcon />} */}
-                    </button>
-                        <div className={this.state.show ? 'collapse navbar-collapse' : 'collapse navbar-collapse active'}>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link text-light" to="/">HOME</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light" to="/movie">Movies</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light" to="/tv">Tv</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light" href="#">CONTACT US</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+
+
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <a className="navbar-brand" href="#">Navbar</a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+
+  <div className="collapse navbar-collapse  " id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <NavLink className="nav-link" to="/home">Home</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/movie">Movies</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/tv">TV</NavLink>
+      </li>
+    </ul>
+    <form className="form-inline my-2 my-lg-0 ">
+      <input className="form-control mr-sm-2 d-flex justify-content-center" type="search" placeholder="Search" aria-label="Search" />
+    </form>
+  </div>
+</nav>
+
         </>
         )
     }
