@@ -4,7 +4,7 @@ class protectedroutes extends Component {
     render() {
         return (
             <div>
-                hello
+                
             </div>
         );
     }
