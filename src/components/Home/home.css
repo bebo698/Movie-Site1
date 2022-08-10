@@ -1,0 +1,13 @@
+.red 
+{
+    position: relative;
+    animation: mymove 5s infinite;
+    transform:50px;
+    translate: 50px;
+    
+
+}
+@keyframes mymove {
+    from {right: 0px;}
+    to {left: 200px;}
+  }

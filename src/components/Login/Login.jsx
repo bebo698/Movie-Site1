@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Button from '@mui/material/Button';
 import { withRouter } from "../../utils/withRouter";
- 
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 
 export default withRouter(class Login extends Component {
     
@@ -44,7 +48,9 @@ export default withRouter(class Login extends Component {
                     <input onChange={this.getformData} name="email" type="text" placeholder="Enter email" className="form-control mt-3" />
                     <input onChange={this.getformData} name="password" type="text" placeholder="Enter password" className="form-control mt-3" />
                     <button className="btn btn-info  float-right mt-3">Login</button> 
-                   <div className="d-flex justify-content-center my-5" > {this.state.errorMessage} </div>
+                   {/* <div className="d-flex justify-content-center my-5" > {this.state.errorMessage} </div> */}
+                   <Alert severity="error">{this.state.errorMessage}</Alert>
+                    
 
                 </form>
 
