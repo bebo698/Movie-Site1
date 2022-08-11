@@ -33,8 +33,9 @@ export default class Movies extends Component {
                                         <div key={index} className="container col-md-2   my-5">
                                             <div className='item'>
 
-                                                <img className='w-100' src={"https://image.tmdb.org/t/p/original/" + value.poster_path} />
-                                                <h3>{value.name} {value.title}</h3>
+                                                <img  className='w-100' style={{borderRadius:"5px",width : "200px" }}
+                                                src={"https://image.tmdb.org/t/p/original/" + value.poster_path} />
+                                                <h3 style={{  fontSize:"15px" }}>{value.name} {value.title}</h3>
                                                 <span className='rate'> {value.vote_average}</span>
 
                                             </div>

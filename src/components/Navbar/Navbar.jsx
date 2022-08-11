@@ -1,9 +1,24 @@
 import React , {Component} from "react";
  
 import {NavLink} from "react-router-dom" ;
- 
+ import axios from "axios";
 export default class Navbar extends Component 
 {
+  state = { movie: [] , tv:[] }
+  gettrending = async (mediatype) => {
+      let { data } = await axios.get(`https://api.themoviedb.org/3/trending/${mediatype}/day?api_key=52bbcddeda849047525b51d6f8a12361`);
+
+      console.log(data.results);
+      this.setState({ [mediatype]: data.results })
+  
+  }
+
+  componentDidMount() {
+      this.gettrending('movie');
+            this.gettrending('tv');
+
+
+  };
 
     constructor ()
     {
@@ -14,9 +29,10 @@ export default class Navbar extends Component
     {
         return (
         <>
+        
 
 
-<nav className="navbar navbar-expand-lg navbar-light bg-light ">
+<nav className="navbar container-fluid navbar-expand-lg navbar-light bg-light ">
   <a className="navbar-brand" href="#">Navbar</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
