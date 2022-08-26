@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './button.scss';
+import $ from'jquery'
  
  const Button = (props) => {
   return (
