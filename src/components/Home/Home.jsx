@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Heroslide from "../hero-slide/Heroslide";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
-
+// import footer from './components/footer/footer.jsx';
 // Import Swiper styles
-import 'swiper/css';
+import 'swiper/swiper.min.css';
 
 import "./home.css";
 export default class Home extends Component {
@@ -83,6 +84,7 @@ export default class Home extends Component {
               );
             })}
        </Swiper>
+       {/* <footer/> */}
       </>
     );
   }
