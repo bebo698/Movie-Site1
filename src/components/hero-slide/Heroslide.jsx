@@ -55,6 +55,7 @@ const Heroslide = () => {
 
 const HeroslideItem = (props) => {
   let history = useNavigate();
+ 
   const item = props.item;
   const background = apiConfig.originalImage(item.backdrop_path ? item.backdrop_path : item.poster_path);
 
@@ -88,7 +89,7 @@ const HeroslideItem = (props) => {
               {item.overview}
             </div>
             <div className="btns m-3">
-              <Button onClick={()=> history.push('/movie/'+item.id)}>
+              <Button onClick={()=> history('/movie/'+item.id)}>
                 WaTCH Now 
               </Button>
               <OutlineButton onClick={setModalActive}>
