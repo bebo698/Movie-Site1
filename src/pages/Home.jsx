@@ -9,16 +9,47 @@ class home extends Component {
         return (
                 
                 <>
-                <Heroslide /><div className="container">
+                <Heroslide/>
+            <div className="container">
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Trending Now</h2>
+                        <h2>Trending Movies</h2>
                         <Link to="/movie">
-                            <OutlineButton className="small" >View More</OutlineButton>
+                            <OutlineButton className="small">View more</OutlineButton>
                         </Link>
                     </div>
-                    <MovieList category={category.movie} type={MovieType.popular} />
+                    <MovieList category={category.movie} type={MovieType.popular}/>
                 </div>
+
+                <div className="section mb-3">
+                    <div className="section__header mb-2">
+                        <h2>Top Rated Movies</h2>
+                        <Link to="/movie">
+                            <OutlineButton className="small">View more</OutlineButton>
+                        </Link>
+                    </div>
+                    <MovieList category={category.movie} type={MovieType.top_rated}/>
+                </div>
+
+                <div className="section mb-3">
+                    <div className="section__header mb-2">
+                        <h2>Trending TV</h2>
+                        <Link to="/tv">
+                            <OutlineButton className="small">View more</OutlineButton>
+                        </Link>
+                    </div>
+                    <MovieList category={category.tv} type={tvType.popular}/>
+                </div>
+
+                <div className="section mb-3">
+                    <div className="section__header mb-2">
+                        <h2>Top Rated TV</h2>
+                        <Link to="/tv">
+                            <OutlineButton className="small">View more</OutlineButton>
+                        </Link>
+                    </div>
+                    <MovieList category={category.tv} type={tvType.on_the_air}/>
+                 </div>
             </div>
                  </>
         );

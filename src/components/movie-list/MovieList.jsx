@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
- 
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from 'swiper';
+
 import { Link } from "react-router-dom";
 import apiConfig from "../../api/apiConfig.js";
 // import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
  
 import propTypes from "prop-types";
 import "./movie-list.scss";
@@ -16,6 +18,8 @@ const MovieList = (props) => {
 const [items, setItems] = useState([]);
 
   useEffect(() => {
+    SwiperCore.use([Autoplay]);
+
     const getList = async () => {
       let response = null;
       const params = {};
@@ -36,10 +40,7 @@ const [items, setItems] = useState([]);
 }, []);
   return (
     <>
-      <OwlCarousel className="owl-theme" loop margin={10} nav>
-     
-        
-
+      {/* <OwlCarousel className="owl-theme" loop margin={10} nav>
         {
             items.map((item,i)=>(
                 <div className="item" key={i}>
@@ -54,14 +55,22 @@ const [items, setItems] = useState([]);
             
             ))
         }
-        
-        <div><h1></h1></div>
-         
-       
-        {/* <div class='item'>
-        <h4>11</h4>
-    </div> */}
-          </OwlCarousel>
+          </OwlCarousel> */}
+           <div className="movie-list">
+            <Swiper
+                grabCursor={true}
+                spaceBetween={10}
+                slidesPerView={'auto'}
+            >
+                {
+                    items.map((item, i) => (
+                        <SwiperSlide key={i}>
+               <img src={apiConfig.w500Image(item.poster_path)} alt="" />
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+        </div>
 
       
       
