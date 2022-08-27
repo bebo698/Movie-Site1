@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 export default class Movies extends Component {
-    state = { movie: [] }
+    state = { movie: [] ,tv:[]}
     gettrending = async (mediatype) => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/trending/${mediatype}/day?api_key=52bbcddeda849047525b51d6f8a12361`);
 
@@ -11,7 +11,8 @@ export default class Movies extends Component {
     }
     componentDidMount() {
         this.gettrending('movie');
- 
+        this.gettrending('tv');
+
     };
     render() {
         return (

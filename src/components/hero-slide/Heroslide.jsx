@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import apiConfig from "../../api/apiConfig.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+// import React from 'react';
 // swipercore هيا اللى بتشغل التشغيل الالى 
 import SwiperCore, { Autoplay } from 'swiper';
 import tmdbApi, { category, MovieType } from "../../api/tmdbApi";
@@ -9,11 +9,14 @@ import { useNavigate } from "react-router-dom";
 import "swiper/swiper.min.css";
 import Modal , { ModelContent } from '../model/Modal'
 import "./hero-slide.scss";
-
+ 
+ 
 import Button,{OutlineButton} from "../button/Button.jsx";
 const Heroslide = () => {
 // ودا اللى بيشغلها
   SwiperCore.use([Autoplay]);
+  ///
+ 
   const [movieItems, setMovieItems] = useState([]);
 
   useEffect(() => {
@@ -32,11 +35,12 @@ const Heroslide = () => {
     getmovies();
   }, []);
 
+  
   return (
    <div className="hero-slide">
     <Swiper
       modules={[Autoplay]}
-      grabCursor={true}
+      // grabCursor={true}
       spaceBetween={0}
       slidesPerView={1}
       autoplay={{ delay: 600 }}
@@ -45,6 +49,8 @@ const Heroslide = () => {
         <SwiperSlide key={i}>{({ isActive }) => <HeroslideItem item={item} className={`${isActive ? 'active':''}`} />}</SwiperSlide>
       ))}
     </Swiper>
+        {/* frf */}
+       
     {
       movieItems.map((item,i)=> <TrailerModel key={i} item={item} />)
     }
@@ -103,6 +109,7 @@ const HeroslideItem = (props) => {
         </div>
         </div>`
     </div>
+    
   );
 };
 
