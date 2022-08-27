@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from 'swiper';
-
+import MovieCard from "../movie-card/MovieCard.jsx";
 import { Link } from "react-router-dom";
 import apiConfig from "../../api/apiConfig.js";
 // import React from 'react';
@@ -65,7 +65,8 @@ const [items, setItems] = useState([]);
                 {
                     items.map((item, i) => (
                         <SwiperSlide key={i}>
-               <img src={apiConfig.w500Image(item.poster_path)} alt="" />
+               {/* <img src={apiConfig.w500Image(item.poster_path)} alt="" /> */}
+                          <MovieCard item={item} category={props.category} />
                         </SwiperSlide>
                     ))
                 }
