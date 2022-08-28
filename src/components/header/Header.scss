@@ -68,6 +68,10 @@ img {
             {
                 width: 100%;
             }
+            a{
+                text-decoration: none !important;
+
+            }
         }
 
         @include mobile {
@@ -75,10 +79,12 @@ img {
             bottom: 0;
             left: 0;
             height: 5rem;
-            width: 100px;
+            width: 100%;
             background-color: $body-bg;
             padding : 0 2rem;
             box-shadow: $box-shadow;
+            z-index: 999;
+            
 // بص هنا الفليكس مش قاري معاك عايزين نشوف حوار ال include دا 
             @include flex (center, space-between );
             & > * ~ * {

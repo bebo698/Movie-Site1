@@ -11,7 +11,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home";
 // import Home from './components/Home/Home.jsx';
-
+import './App.scss';
 import Catalog from './pages/Catalog.jsx';
 import Details from './pages/Details.jsx';
 import Login from './components/Login/Login.jsx';

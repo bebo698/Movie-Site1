@@ -75,13 +75,15 @@
     bottom: 0;
     left: 0;
     height: 5rem;
-    width: 100px;
+    width: 100%;
+    z-index: 9999;
     background-color: #0f0f0f;
     padding: 0 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #ff0000;
   }
   .header__nav > * ~ * {
     margin-left: 0;

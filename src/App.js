@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import _index from './scss/_index.scss';
-import './App.scss';
+
   
 // import Movies from './components/Movies/Movies.jsx';
 // import Navbar from './components/Navbar/Navbar.jsx';
