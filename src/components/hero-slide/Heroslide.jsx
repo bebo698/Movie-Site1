@@ -43,7 +43,7 @@ const Heroslide = () => {
       // grabCursor={true}
       spaceBetween={0}
       slidesPerView={1}
-      autoplay={{ delay: 600 }}
+      autoplay={{ delay: 2000 }}
     >
       {movieItems.map((item, i) => (
         <SwiperSlide key={i}>{({ isActive }) => <HeroslideItem item={item} className={`${isActive ? 'active':''}`} />}</SwiperSlide>
