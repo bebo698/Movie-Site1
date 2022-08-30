@@ -16,7 +16,7 @@ import Catalog from './pages/Catalog.jsx';
 import Details from './pages/Details.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />; 
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,12 +31,14 @@ root.render(
           </>
         )}/> */}
       <Route path='/' element={<App />}>
-        <Route path="/home" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register/>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
         <Route path="/movie" element={<Catalog />} />
-         <Route path="/:category" element={<Details />} />
-         <Route path="/category" element={<Catalog />} />
+        <Route path="/tv" element={<Catalog tv/>} />
+
+        <Route path="/category" element={<Catalog />} />
         <Route path="*" element={<h3>Sorry this page can't be found</h3>} />
       </Route>
 
