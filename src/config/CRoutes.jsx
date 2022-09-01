@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Routes } from "react-router-dom"
 import Home from '../pages/Home';
- import Details from '../pages/Details';
- import Catalog from '../pages/Catalog';
+import Details from '../pages/detail/Details';
+  import Catalog from '../pages/Catalog';
 //  class CRoutes extends Component {
 //     render() {
 //       console.log("sddsd")

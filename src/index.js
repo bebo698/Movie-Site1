@@ -13,7 +13,7 @@ import Home from "./pages/Home";
 // import Home from './components/Home/Home.jsx';
 import './App.scss';
 import Catalog from './pages/Catalog.jsx';
-import Details from './pages/Details.jsx';
+import Details from './pages/detail/Details';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />;
