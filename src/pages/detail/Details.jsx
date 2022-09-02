@@ -64,6 +64,10 @@ const Detail = () => {
                                         <div className="section mb-3">
                                             <VideoList id={item.id} />
                                          </div>
+                                         </div>
+                                         <div>
+                                            {/* shokrannnnn */}
+                                            
                                          <div className="section mb-3">
                                             <div className="section__header mb-2">
                                                 <h2>Similar</h2>
