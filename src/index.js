@@ -6,7 +6,6 @@ import "popper.js/dist/umd/popper.min.js"
 import '@popperjs/core'
 import "bootstrap/dist/js/bootstrap.min.js"
 import "@fortawesome/fontawesome-free/css/all.min.css"
-import $ from 'jquery';
 import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home";
@@ -37,9 +36,20 @@ root.render(
 
         <Route path="/movie" element={<Catalog />} />
         <Route path="/tv" element={<Catalog tv/>} />
-
-        <Route path="/category" element={<Catalog />} />
-        <Route path="*" element={<h3>Sorry this page can't be found</h3>} />
+        <Route
+                path='/:category/:id'
+                element={<Details/>}
+            />
+            <Route
+                path='/:keyword/search/:keyword'
+                element={<Catalog/>}
+            />
+            <Route
+                path='/:category/:id'
+                element={<Details/>}
+            />
+        <Route path="/:category" element={<Catalog />} />
+        {/* <Route path="*" element={<h3>Sorry this page can't be found</h3>} /> */}
       </Route>
 
     </Routes>

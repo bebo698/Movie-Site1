@@ -85,7 +85,7 @@ const MovieGrid = ({ check }) => {
     </div>
       <div className="movie-grid">
         {items.map((item, i) =>
-          <MovieCard category={check} item={item} key={i} />
+          <MovieCard category={keyword} item={item} key={i} />
         )}
       </div>
       {
