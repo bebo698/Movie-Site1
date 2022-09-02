@@ -58,7 +58,7 @@ const Detail = () => {
                                             <CastList id={item.id} />
                                         </div>
                                     </div>
-                                  
+                                  {/* hi */}
                                     </div>
                                     <div className="container">
                                         <div className="section mb-3">
